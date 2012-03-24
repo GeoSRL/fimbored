@@ -9,13 +9,13 @@
 		//if the user is logged in show an error
 		if ($session->loggedIn) { 
 				
-			$database->fail("", 12);
+			$database->db_fail("", 12);
 			exit;
 		
 		//check if registrations are open or closed.		
 		}	elseif ($database->db_select[0]["regstatus"] === "closed") {
 			
-			$database->fail("", 14);
+			$database->db_fail("", 14);
 			exit;
 			
 		}
