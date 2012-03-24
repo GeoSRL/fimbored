@@ -1,0 +1,107 @@
+h4.chkboxform {
+     float: left;
+     margin-top: 7px;
+}
+
+#admin_nav {
+     border-bottom: 1px solid #E1E1E1;
+     float: left;
+     list-style-type: none;
+     overflow: hidden;
+     width: 100%;
+}
+
+.admin_navli {
+     background: none repeat scroll 0pt 0pt #F9F9F9;
+     border-color: #E1E1E1;
+     border-style: solid solid none;
+     border-width: 1px 1px 0pt;
+     line-height: 20px;
+     margin: 0pt 5px;
+     padding: 0pt 5px;
+}
+
+.active {
+    
+}
+
+.center-box {
+     border-right: 1px solid #E1E1E1;
+     float: left;
+     margin: 10px auto 0pt;
+     padding: 5px;
+     width: 302px;
+}
+
+.header-center-box {
+     border-bottom: 1px solid #E1E1E1;
+     clear: both;
+     margin-bottom: 5px;
+}
+
+.chkbox-form {
+     clear: both;
+     float: left;
+     margin: 10px 5px;
+}
+
+ul.tabs {
+     clear: both;
+     height: 23px;
+}
+
+ul.tabs li {
+     border-bottom: 1px solid #E4E4E4;
+     float: left;
+     height: 22px;
+     line-height: 22px;
+     overflow: hidden;
+     padding: 0pt;
+     position: relative;
+     width: 98px;
+}
+
+ul.tabs li a {
+     color: #000000;
+     display: block;
+     font-size: 12.4px;
+     outline: medium none;
+     padding: 0pt 5px;
+     text-decoration: none;
+}
+
+ul.tabs li a:hover {
+     color: #565656;
+}
+
+html ul.tabs li.active, html ul.tabs li.active a:hover {
+     background: none repeat scroll 0pt 50% transparent;
+     border-bottom: 1px solid #779F4B;
+}
+
+.tab_container {
+     clear: both;
+     float: left;
+     overflow: hidden;
+     width: 290px;
+}
+
+.tab_content {
+     font-size: 12.4px;
+     padding: 6px;
+}
+
+.hide_all {
+     color: #B9B9B9;
+     cursor: pointer;
+     float: right;
+     font-size: 12.4px;
+}
+
+.hide_all:hover {
+     color: #A9A9A9;
+}
+
+.clearb {
+     clear: both;
+}

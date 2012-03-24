@@ -1,0 +1,25 @@
+body {
+	background: #FFFFFF;
+	font-size: 13px;
+	font-family: Arial;
+	padding: 0;
+	margin: 0;
+}
+
+#header {
+	height: 50px;
+	color: #79B55B;
+	font-size: 36px;
+}
+
+
+.text {
+     float: left;
+     font-family: 'Cabin', sans-serif;
+     font-style: normal;
+     font-weight: 400;
+     letter-spacing: 0pt;
+     text-decoration: none;
+     text-transform: none;
+     word-spacing: 0em;
+}

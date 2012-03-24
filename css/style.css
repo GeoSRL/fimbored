@@ -1,0 +1,271 @@
+@charset "utf-8";
+
+* {
+     margin: 0pt;
+     outline: medium none;
+     padding: 0pt;
+}
+
+.pinfo {
+     border-right: 1px solid #848484;
+     float: left;
+     margin: 0pt 0pt 0pt 10px;
+     width: 258px;
+}
+
+.pinfo_avatar {
+     float: left;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a {
+     border: 0pt none;
+     font-family: inherit;
+     font-size: 100%;
+     font-style: inherit;
+     font-weight: inherit;
+     margin: 0pt;
+     outline: medium none;
+     padding: 0pt;
+     vertical-align: baseline;
+}
+
+body {
+     background: none repeat scroll 0pt 0pt #F7F7F7;
+     color: #656565;
+     font-family: Arial;
+     font-size: 12px;
+     word-spacing: 1px;
+}
+
+a {
+     color: #D6E68A;
+     text-decoration: none;
+     text-shadow: 0pt 1px 0pt #666666;
+}
+
+a:hover {
+     color: #FFFFFF;
+}
+
+ul.navigation {
+     list-style-type: none;
+}
+
+li.nav {
+     padding: 0pt 9px;
+}
+
+#wrapper {
+     margin: 0pt auto;
+     width: 960px;
+}
+
+#header-container {
+     background: none repeat scroll 0pt 0pt #95AA61;
+     box-shadow: 0pt 2px 2px #CCCCCC;
+     height: 35px;
+}
+
+.header_links {
+     font-weight: 700;
+     text-decoration: none;
+     text-shadow: none;
+}
+
+.header_links:active {
+     color: #545454;
+}
+
+#sidebar_cont {
+     float: right;
+     padding: 5px;
+     width: 240px;
+}
+
+#body-container {
+     float: left;
+     padding: 10px;
+     width: 938px;
+}
+
+#main_cont {
+     float: left;
+     padding: 10px;
+     width: 660px;
+}
+
+#footer-container {
+     clear: both;
+     color: #555555;
+     font-size: 11px;
+     padding: 5px;
+}
+
+#login-error {
+     float: right;
+     margin: 0pt 0pt 0pt 5px;
+     padding: 0pt 5px;
+     width: auto;
+}
+
+#login_form {
+     border: 0pt none;
+     float: right;
+     margin: 0pt 0px 0px 4px;
+     padding: 0pt 6px;
+     width: auto;
+}
+
+#center-box {
+     margin: 0pt auto;
+     width: 323px;
+}
+
+#atk_icon {
+     background: url("http://fimbored.com/code/images/icons.png") no-repeat scroll -1px 0pt transparent;
+     clear: both;
+     float: left;
+     height: 15px;
+     width: 23px;
+}
+
+#def_icon {
+     background: url("http://fimbored.com/code/images/icons.png") no-repeat scroll -44px 0pt transparent;
+     clear: both;
+     float: left;
+     height: 22px;
+     width: 23px;
+}
+
+#str_icon {
+     background: url("http://fimbored.com/code/images/icons.png") no-repeat scroll -21px 0pt transparent;
+     clear: both;
+     float: left;
+     height: 20px;
+     width: 23px;
+}
+
+.body-text {
+     border-left: 1px dotted #545454;
+     clear: both;
+     color: #565656;
+     margin: 5px;
+     padding: 5px;
+}
+
+.login_box {
+     background: none repeat scroll 0pt 0pt #C0CF7C;
+     border-radius: 2px 2px 2px 2px;
+     border: 0pt none;
+     box-shadow: 0pt 0pt 1px #232323;
+     font-size: 11px;
+     margin: 4px 4px 0pt 0pt;
+     padding: 3px;
+}
+
+.msg_form {
+    
+}
+
+.time {
+     font-size: 28px;
+     margin-left: 7px;
+}
+
+.stats {
+     border-bottom: 1px dotted #E1E1E1;
+     width: 245px;
+}
+
+.gang {
+     color: #606060;
+     font-size: 21.5px;
+}
+
+.text {
+     float: left;
+     font-family: Arial;
+     font-style: normal;
+     font-weight: 400;
+     letter-spacing: 0pt;
+     text-decoration: none;
+     text-transform: none;
+}
+
+.header {
+     float: left;
+     font-size: 30px;
+     margin: 0pt 0pt 0pt 4px;
+     width: auto;
+}
+
+.underheader {
+     clear: both;
+     font-size: 13.5px;
+     margin: 0pt 4px;
+}
+
+.navigation {
+     float: right;
+     line-height: 2.3em;
+     padding: 4px;
+     width: 815px;
+}
+
+.search_box {
+     border: 0pt none;
+     float: right;
+}
+
+.search_txt {
+     clear: both;
+     cursor: text;
+     float: left;
+     margin: 15px 0px 0px;
+     width: 312px;
+}
+
+.search_btn {
+     cursor: pointer;
+     padding: 2px;
+}
+
+.error {
+     border: 1px solid #CC0000;
+     color: #CC0000;
+     float: left;
+		 text-align: center;
+     margin: 5px 0pt;
+     padding: 5px 7px;
+     width: 93%;
+}
+
+.success {
+     border: 1px solid #009900;
+     color: #009900;
+     float: left;
+     margin: 5px 0pt;
+     padding: 5px 7px;
+     width: 93%;
+}
+
+.contact {
+     box-shadow: 0px 0px 1px #545454;
+     float: left;
+     margin-bottom: 4px;
+     padding: 2px;
+}
+
+.right {
+     float: right;
+}
+
+.left {
+     float: left;
+}
+
+.post-header-txt {
+     color: #87A751;
+     font-size: 12.4px;
+     padding-bottom: 5px;
+}
