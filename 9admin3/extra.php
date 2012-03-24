@@ -1,6 +1,6 @@
 <?
  $dir = "../"; #for the session include in header.php
- include('../inc-main/header.php'); 
+ include('../inc_html/header.php'); 
  
  if (!$session->isAdmin) {
 	
@@ -21,4 +21,4 @@
 	
 </div>
 	
-<? include('../inc-main/footer.php'); ?>
+<? include('../inc_html/footer.php'); ?>

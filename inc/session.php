@@ -1,6 +1,7 @@
 <?php
 
 	include('config.php');
+	include('global.php');
 	include('database.php');
 	include('form.php');
 	include('check.php');

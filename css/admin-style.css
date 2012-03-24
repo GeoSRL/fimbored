@@ -7,7 +7,6 @@ h4.chkboxform {
      border-bottom: 1px solid #E1E1E1;
      float: left;
      list-style-type: none;
-     overflow: hidden;
      width: 100%;
 }
 
@@ -55,7 +54,7 @@ ul.tabs li {
      float: left;
      height: 22px;
      line-height: 22px;
-     overflow: hidden;
+		 list-style-type: none;
      padding: 0pt;
      position: relative;
      width: 98px;
@@ -65,9 +64,10 @@ ul.tabs li a {
      color: #000000;
      display: block;
      font-size: 12.4px;
-     outline: medium none;
+     outline: medium none;	 
      padding: 0pt 5px;
      text-decoration: none;
+		 text-shadow: none;
 }
 
 ul.tabs li a:hover {
@@ -82,7 +82,6 @@ html ul.tabs li.active, html ul.tabs li.active a:hover {
 .tab_container {
      clear: both;
      float: left;
-     overflow: hidden;
      width: 290px;
 }
 

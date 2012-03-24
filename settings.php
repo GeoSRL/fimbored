@@ -1,8 +1,8 @@
-<? include('inc-main/header.php'); ?>
+<? include('inc_html/header.php'); ?>
 	
 <div id="body-container">
 	
 		
 </div>
 	
-<? include('inc-main/footer.php'); ?>
+<? include('inc_html/footer.php'); ?>

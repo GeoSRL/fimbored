@@ -1,4 +1,4 @@
-<? include('inc-main/header.php'); ?>
+<? include('inc_html/header.php'); ?>
 	
 <div id="center-box">
 
@@ -43,14 +43,14 @@
 		</div>
 		<div class="search_txt" style="margin-bottom: 10px;">        
 			<?
-				$publickey = "6LdD48wSAAAAAHEZ46qlWqNMw3h1LvcMGKDTnOwj "; // you got this from the signup page
+				$publickey = RECAPTCHA_PUB; // you got this from the signup page
 				echo recaptcha_get_html($publickey);
 			?>
 		</div>
-		<input type="submit" name="reg_form" value="Register" class="search_btn left" >
+		<input type="submit" name="reg_form" value="Register" class="main_btn search_btn left" >
 		
 	</form>
 
 </div>
 	
-<? include('inc-main/footer.php'); ?>
+<? include('inc_html/footer.php'); ?>

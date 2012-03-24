@@ -1,6 +1,6 @@
 <?
  $dir = "../"; #for the session include in header.php
- include('../inc-main/header.php'); 
+ include('../inc_html/header.php'); 
  
  if (!$session->isAdmin) {
 	
@@ -14,7 +14,7 @@
 <div id="body-container"> 
 	
 	<ul id="admin_nav">
-		<li class="admin_navli left active"><a href="index.php">Home</a></li>
+		<li class="admin_navli left active"><a class="main_link" href="index.php">Home</a></li>
 	</ul>
 	
 	<div class="center-box">
@@ -46,7 +46,7 @@
 			 ?>
 			 </h4> 
 			 			
-			<input style="float: right; clear: both;" class="search_btn" type="submit" value="Submit" name="site_settings_form">
+			<input style="float: right; clear: both;" class="main_btn search_btn" type="submit" value="Submit" name="site_settings_form">
 		</form>
 		
 		<h4 class="header-center-box">Add:</h4>
@@ -56,7 +56,7 @@
 		 $form->add_weap();
 		 $form->add_job(); 
 		
-		include('../inc-main/adm-add.php'); ?>
+		include('../inc_html/adm-add.php'); ?>
 		
 	</div> 
 	
@@ -70,4 +70,4 @@
 	
 </div>  
 	
-<? include('../inc-main/footer.php'); ?>
+<? include('../inc_html/footer.php'); ?>

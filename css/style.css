@@ -1,22 +1,5 @@
 @charset "utf-8";
 
-* {
-     margin: 0pt;
-     outline: medium none;
-     padding: 0pt;
-}
-
-.pinfo {
-     border-right: 1px solid #848484;
-     float: left;
-     margin: 0pt 0pt 0pt 10px;
-     width: 258px;
-}
-
-.pinfo_avatar {
-     float: left;
-}
-
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, a {
      border: 0pt none;
      font-family: inherit;
@@ -64,22 +47,6 @@ li.nav {
      background: none repeat scroll 0pt 0pt #95AA61;
      box-shadow: 0pt 2px 2px #CCCCCC;
      height: 35px;
-}
-
-.header_links {
-     font-weight: 700;
-     text-decoration: none;
-     text-shadow: none;
-}
-
-.header_links:active {
-     color: #545454;
-}
-
-#sidebar_cont {
-     float: right;
-     padding: 5px;
-     width: 240px;
 }
 
 #body-container {
@@ -145,6 +112,42 @@ li.nav {
      width: 23px;
 }
 
+#sidebar_cont {
+     float: right;
+     padding: 5px;
+     width: 240px;
+}
+
+.main_link {
+     color: #545454;
+     text-shadow: none;
+}
+
+.main_link:hover {
+     color: #343434;
+}
+
+.header_links {
+     font-weight: 700;
+     text-decoration: none;
+     text-shadow: none;
+}
+
+.header_links:active {
+     color: #545454;
+}
+
+.pinfo {
+     border-right: 1px solid #848484;
+     float: left;
+     margin: 0pt 0pt 0pt 10px;
+     width: 258px;
+}
+
+.pinfo_avatar {
+     float: left;
+}
+
 .body-text {
      border-left: 1px dotted #545454;
      clear: both;
@@ -164,7 +167,7 @@ li.nav {
 }
 
 .msg_form {
-    
+     width: 233px ! important;
 }
 
 .time {
@@ -230,13 +233,19 @@ li.nav {
      padding: 2px;
 }
 
+.main_btn {
+     background: none repeat scroll 0% 0% #FFFFFF;
+     border: 0pt none;
+     box-shadow: 0px 0px 1px #494949;
+}
+
 .error {
      border: 1px solid #CC0000;
      color: #CC0000;
      float: left;
-		 text-align: center;
      margin: 5px 0pt;
      padding: 5px 7px;
+     text-align: center;
      width: 93%;
 }
 
