@@ -19,8 +19,8 @@ class form {
 		
 		global $database;
 				
-		if(isset($_POST['msgform'])) {
-					
+	if(isset($_POST['msgform'])) {
+				
 			$this->name = htmlspecialchars(trim($_POST['name']));
 			$this->email = htmlspecialchars(trim($_POST['email']));
 			$this->message = htmlspecialchars(trim($_POST['message']));
@@ -31,16 +31,15 @@ class form {
 						
 			if (!$this->name || !$this->email || !$this->message) {
 				
-				$database->db_fail("", 1);
+				$database->db_fail(FORM_INCOMPLETE);
 					
 			} elseif(strpos($this->email, "@") == 0 || strpos($this->email, ".") == 0) {
 				
-				$database->db_fail("", 2);
+				$database->db_fail(EMAIL_INVALID);
 					
-			} elseif ($ip == $database->db_select[0]["ip"] && 
-								$database->db_select[0]["time"] > microtime(true)) {
-									
-				$database->db_fail("", 3);
+			} elseif ($ip == $database->db_select[0]["ip"] && $database->db_select[0]["time"] > microtime(true)) {
+														
+				$database->db_fail(FORM_LIMIT);
 						
 			} else {
 			
@@ -55,7 +54,6 @@ class form {
 				
 			}
 		}
-	
 	} 
 	
 	
@@ -71,6 +69,7 @@ class form {
 			$username = htmlspecialchars($_POST['usr']);
 			$password = htmlspecialchars($_POST['pwd']);
 			$token_f = htmlspecialchars($_POST['tkn']);
+			$this->do_login = false;
 			$s_id = session_id();
 			$time = microtime(true);
 												
@@ -78,19 +77,19 @@ class form {
 								
 			if (!$username || !$password || !$token_f) {
 				
-				$database->db_fail("", 1);
+				$database->db_fail(FORM_INCOMPLETE);
 				
 			} elseif ($database->db_count[0][0] == 0) {
 				
-				$database->db_fail("", 11);
+				$database->db_fail(USER_INVALID);
 							
 			} elseif (!$check->chk_valid_login(ucfirst($username), $password)) {
 				
-				$database->db_fail("", 11);				
+				$database->db_fail(LOGIN_INVALID);				
 				
 			} elseif ($token_f != $_SESSION['token']) {
 				
-				$database->db_fail("", 13);
+				$database->db_fail(REPORT);
 				
 			} else {
 				
@@ -123,28 +122,28 @@ class form {
     $_SERVER["REMOTE_ADDR"],
     $_POST["recaptcha_challenge_field"],
     $_POST["recaptcha_response_field"]);
-			
+												
 		if(isset($_POST['reg_form'])) {
 			
 			if (!$this->user || !$password || !$password2 || !$this->email1 || !$this->email2) {
 				
-					$database->db_fail("", 1);		
+					$database->db_fail(FORM_INCOMPLETE);
 										
-			} elseif (!$check->checkUsername($this->user)) {
+			} elseif (!$check->chk_username($this->user)) {
 				
-					$database->db_fail("", $check->failID);
+					$check->result;
 					
-			} elseif (!$check->checkPass($password, $password2)) {
+			} elseif (!$check->chk_pass($password, $password2)) {
 				
-					$database->db_fail("", $check->failID);
+					$check->result;
 				
-			} elseif (!$check->checkEmail($this->email1, $this->email2)) {
+			} elseif (!$check->chk_email($this->email1, $this->email2)) {
 				
-					$database->db_fail("", $check->failID);	
+					$check->result;
 					
 			} elseif (!$resp->is_valid) {   
   				
-    			echo "<div class=\"error\">". $database->db_fail("", 8) ." {(reCAPTCHA said: " . $resp->error . ")}</div>";
+    			echo "<div class=\"error\">". $database->db_fail(CAPTCHA) ." {(reCAPTCHA said: " . $resp->error . ")}</div>";
 
 			} else {
 				
@@ -207,7 +206,7 @@ class form {
 		
 		if (isset($_POST['addWeap'])) {
 			
-			if ($session->isAdmin = false) {
+			if (!$session->isAdmin) {
 				
 					echo "You shouldn't be here";
 					
@@ -215,7 +214,7 @@ class form {
 			
 			if (!$this->name || !$this->ammo || !$this->price || !$this->level || !$this->damage || !$this->reqs) {
 				
-				$database->db_fail("", 1);
+				$database->db_fail(FORM_INCOMPLETE);
 							
 			} else {
 			
@@ -248,7 +247,7 @@ class form {
 			
 			if (!$this->name || !$this->effect || !$this->level || !$this->price) {	
 				
-				$database->db_fail("", 1);
+				$database->db_fail(FORM_INCOMPLETE);
 				
 			}	else {
 				
@@ -281,7 +280,7 @@ class form {
 		
 			if (!$this->name || !$this->obj || !$this->desc || !$this->reward || !$this->money || !$this->reqs) {
 				
-				$database->db_fail("", 1);
+				$database->db_fail(FORM_INCOMPLETE);
 				
 			} else {
 				

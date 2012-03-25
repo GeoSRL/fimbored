@@ -1,4 +1,6 @@
-			<div id="footer-container" class="right">&copy; fimbored.com 2011 / <? $endtime = microtime() - $starttime; echo round($endtime, 5) . " ms"?></div>	
+			<div id="footer-container" class="right">&copy; fimbored.com 2011 / 
+			<? $endtime = microtime() - $starttime; echo round($endtime, 5) . " ms"?> / 
+			<a style="text-shadow: none; color: #545454;" href="https://github.com/GeoSRL/fimbored">Github</a></div>	
 	
 		<!-- End Wrapper -->	
 		</div>

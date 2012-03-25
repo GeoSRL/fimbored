@@ -70,31 +70,16 @@ class database {
 		CSS used when specific styling is needed example is the login form
 		located in form.php
 	*/
-	public function db_fail($styleid, $err_id) {
+	public function db_fail($error_msg) {
 		
 		global $form;
-		
-		//3 error msgs on each line :: 14
-		$err_msgs = array("The form is incomplete", "Invalid email entered", "Limit reached, wait 5 minutes",
-											"Username already taken", "Username to short, min 4 chars", "Emails do not match",
-											"Passwords do not match", "Captcha is incorrect", "Password is too short, min 8 chars",
-											"User does not exist", "Invalid User/Pass", "Already logged in", 
-											"Report this, please ;)", "Registrations are currently closed");
-											
-		for($i = 0; $i < sizeof($err_msgs)+1; $i++) {
-			
-			if ($i == $err_id) {
-				echo "<div class=\"error\"> " . $err_msgs[$err_id-1] . "</div>";
-				?>
-				 <script type="text/javascript">
-						setTimeout(function hideIt() { $("div.error").fadeOut() }, 10000);
-					</script>
-				<?				
-				break;
 
-			} 
-
-		}
+		echo "<div class=\"error\"> " . $error_msg . "</div>";
+		?>
+		 <script type="text/javascript">
+				setTimeout(function hideIt() { $("div.error").fadeOut() }, 10000);
+			</script>
+		<?				
 
 	}
 

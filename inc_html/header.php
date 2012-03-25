@@ -5,8 +5,8 @@ if ($dir) {
 	include('inc/session.php'); 
 }
 	 
-
-	if(isset($_POST['login_form']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
+	echo $database->do_login;
+	if($database->do_login) {
 		$session->login();
 	}	
 	$session->logout();	

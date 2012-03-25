@@ -20,12 +20,12 @@ class check {
 				
 		if ($database->db_count[0][0] > 0) {
 			
-			$this->failID = 4;
+			$this->result = $database->db_fail(USER_TAKEN);
 			return false;
 			
 		} elseif (strlen($username) <= 4) {
 			
-			$this->failID = 5;
+			$this->result = $database->db_fail(USER_LENGTH);
 			return false;
 		
 		} else {
@@ -46,12 +46,12 @@ class check {
 		
 		if (strpos($email1, "@") == 0 || strpos($email1, ".") == 0) {
 			
-			$this->failID = 2;
+			$this->result = $database->db_fail(EMAIL_INVALID);
 			return false;
 			
 		} elseif ($email1 != $email2) {
 			
-			$this->failID = 6;
+			$this->result = $database->db_fail(EMAIL_MATCH);
 			return false;
 			
 		} else {
@@ -72,12 +72,12 @@ class check {
 		
 		if (strlen($p) < 8) {
 			
-			$this->failID = 9;
+			$this->result = $database->db_fail(PASS_LENGTH);
 			return false; 
 		
 		} elseif ($p != $p1) {
 			
-			$this->failID = 7;
+			$this->result = $database->db_fail(PASS_MATCH);
 			return false;
 			
 		} else {
@@ -109,7 +109,6 @@ class check {
 		}
 						
 	}
-
-	
 	
 } $check = new check; //declare the class for use as an object 
+
