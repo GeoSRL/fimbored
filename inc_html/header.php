@@ -4,14 +4,11 @@ if ($dir) {
 }	else { 
 	include('inc/session.php'); 
 }
-	 
-	echo $database->do_login;
-	if($database->do_login) {
-		$session->login();
-	}	
-	$session->logout();	
+
+	$session->login();
+	$session->logout();
 	$starttime = microtime();
-	$token = sha1(session_id() . "*uno-battery+is-on*the+horse/of+crown+");
+	$token = sha1(session_id() . PRIVATE_KEY);
 	$_SESSION['token'] = $token;
 
 ?>
@@ -53,7 +50,7 @@ function woopraReady(tracker) {
 
 <div id="header-container">
 	<div id="wrapper">
-		<div class="text"><a href="/m" class="header">Fimbored</a></div>
+		<div class="text"><img style="float: left;" src="http://fimbored.com/m/images/alien.png" alt="<?=date("h:m:s");?>" /><a href="/m" class="header">Fimbored</a></div>
 			<ul class="navigation">
 				<li class="nav left"><a href="/m/" class="header_links">Home</a></li>
 				<li class="nav left"><a href="/m/about.php" class="header_links">About</a></li>

@@ -1,6 +1,8 @@
 <?php
 
 class database {
+	
+	public $lenOfErr;
 
 	/*
 		Executes the database request and creates an array, $database->db_select[ROW_#]["ROW_NAME"],
@@ -27,11 +29,11 @@ class database {
 			$colname => what is the column name the information will be added too.
 			$contents => the main information that will be spat out when using $database->db_select
 	*/
-	public function db_add($table, $colname, $contents) {
+	public function db_add($table, $columns, $contents) {
 
 		global $dbh;
 
-		$sth = $dbh->prepare("INSERT INTO $table ( $colname ) VALUES ( $contents )"); 
+		$sth = $dbh->prepare("INSERT INTO $table ( $columns ) VALUES ( $contents )"); 
 		$sth->execute(array($contents));
 
 	}
@@ -51,13 +53,13 @@ class database {
 	
 	/*
 		Counts the table and outputs the result as $database->count_r[0][0]
-		$w2c is used for specific counting, example being $database->countdb("id", "users")
+		$name is used for specific counting, example being $database->countdb("id", "users")
 	*/
-	public function db_count($w2c, $table) {
+	public function db_count($name, $table) {
 
 		global $dbh;
 
-		$sth = $dbh->prepare("SELECT COUNT($w2c) FROM $table");
+		$sth = $dbh->prepare("SELECT COUNT($name) FROM $table");
 		$sth->execute();
 
 		$this->db_count = $sth->fetchAll();
@@ -70,17 +72,18 @@ class database {
 		CSS used when specific styling is needed example is the login form
 		located in form.php
 	*/
-	public function db_fail($error_msg) {
+	public function db_fail($error) {
 		
 		global $form;
+		
+		$this->lenOfErr = strlen($error);
 
-		echo "<div class=\"error\"> " . $error_msg . "</div>";
-		?>
-		 <script type="text/javascript">
-				setTimeout(function hideIt() { $("div.error").fadeOut() }, 10000);
-			</script>
-		<?				
-
+		echo "<div class=\"error\"> " . $error . "</div>";
+	
+	 	echo "<script type=\"text/javascript\">";
+	 	echo "		setTimeout(function hideIt() { $(\"div.error\").fadeOut() }, 10000);";
+	 	echo "</script>";
+					
 	}
 
 	/*

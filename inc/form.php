@@ -9,6 +9,7 @@ class form {
 	#login_form();
 	var $email1;
 	var $email2;
+	public $chk_login;
 	
 	
 	/* 
@@ -62,15 +63,15 @@ class form {
 	*/
 	public function login_form() {
 		
-		global $database, $check, $session;
+		global $database, $check;
 				
 		if(isset($_POST['login_form']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
 			
 			$username = htmlspecialchars($_POST['usr']);
 			$password = htmlspecialchars($_POST['pwd']);
 			$token_f = htmlspecialchars($_POST['tkn']);
-			$this->do_login = false;
 			$s_id = session_id();
+			$this->chk_login = false;
 			$time = microtime(true);
 												
 			$database->db_count("username", "users WHERE username = '$username'");
@@ -93,6 +94,7 @@ class form {
 				
 			} else {
 				
+				$this->chk_login = true;
 				$database->db_update("users", "userid = '$s_id', timestamp = '$time'", "WHERE username = '$username'");
 															
 			}

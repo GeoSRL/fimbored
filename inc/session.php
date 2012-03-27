@@ -138,7 +138,14 @@ class session {
 	}
 	
 	public function login() {
-		header("Location: http://fimbored.com/m/");
+		global $database, $session;
+		
+		if(isset($_POST['login_form']) && $database->lenOfErr = 0) {
+			 
+			header("Location: http://fimbored.com/m/index.php");
+			 
+		}
+		
 	}
 	
 	/*

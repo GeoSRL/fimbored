@@ -45,14 +45,14 @@ li.nav {
 
 #header-container {
      background: none repeat scroll 0pt 0pt #95AA61;
-     box-shadow: 0pt 2px 2px #CCCCCC;
+     box-shadow: 0pt 2px 2px #C9C9C9;
      height: 35px;
 }
 
 #body-container {
      float: left;
-     padding: 10px;
-     width: 938px;
+     padding: 10px 0px 0px;
+     width: 960px;
 }
 
 #main_cont {
@@ -115,7 +115,7 @@ li.nav {
 #sidebar_cont {
      float: right;
      padding: 5px;
-     width: 240px;
+     width: 233px;
 }
 
 .main_link {
@@ -212,7 +212,7 @@ li.nav {
      float: right;
      line-height: 2.3em;
      padding: 4px;
-     width: 815px;
+     width: 775px;
 }
 
 .search_box {
