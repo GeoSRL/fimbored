@@ -2,16 +2,6 @@
 
 class form {
 	
-	#msgform();
-	var $name;
-	var $email;
-	var $message;
-	#login_form();
-	var $email1;
-	var $email2;
-	public $chk_login;
-	
-	
 	/* 
 		Message form for fimbored.com/index.php
 		$cat = category 
@@ -63,7 +53,7 @@ class form {
 	*/
 	public function login_form() {
 		
-		global $database, $check;
+		global $database, $check, $session;
 				
 		if(isset($_POST['login_form']) && $_SERVER['REQUEST_METHOD'] == 'POST') {
 			
@@ -93,9 +83,9 @@ class form {
 				$database->db_fail(REPORT);
 				
 			} else {
-				
-				$this->chk_login = true;
+			
 				$database->db_update("users", "userid = '$s_id', timestamp = '$time'", "WHERE username = '$username'");
+				echo "<meta http-equiv=\"REFRESH\" content=\"0;url=http://fimbored.com/m/\">";
 															
 			}
 		

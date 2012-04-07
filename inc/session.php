@@ -7,7 +7,7 @@
 	include('check.php');
 	include('page.php');
 
-class session {
+class session {	
 	
 	var $loggedIn; #true if the session is active
 	var $time; #current time in ms 
@@ -52,7 +52,7 @@ class session {
 		}
 		
 	}
-	
+
 	/*
 		Checks whether the user is loggedin and 
 		returns true if the session id is present
@@ -134,17 +134,6 @@ class session {
 		}		
 		#finally implode $time and echo the result;				
 		return implode(":", $time);
-		
-	}
-	
-	public function login() {
-		global $database, $session;
-		
-		if(isset($_POST['login_form']) && $database->lenOfErr = 0) {
-			 
-			header("Location: http://fimbored.com/m/index.php");
-			 
-		}
 		
 	}
 	

@@ -5,7 +5,6 @@ if ($dir) {
 	include('inc/session.php'); 
 }
 
-	$session->login();
 	$session->logout();
 	$starttime = microtime();
 	$token = sha1(session_id() . PRIVATE_KEY);
@@ -23,10 +22,7 @@ if ($dir) {
 } ?>
 
 <link rel="shortcut icon" href="http://fimbored.com/m/images/icons/favicon.ico">
-<title>-</title>
-<style type="text/css">
-iframe {display: none;}
-</style>
+<title>Fimbored</title>
 <!-- Start of Woopra Code -->
 <script type="text/javascript">
 function woopraReady(tracker) {
@@ -54,9 +50,7 @@ function woopraReady(tracker) {
 			<ul class="navigation">
 				<li class="nav left"><a href="/m/" class="header_links">Home</a></li>
 				<li class="nav left"><a href="/m/about.php" class="header_links">About</a></li>
-				
-				
-				
+
 		<? if ($session->loggedIn) { ?>
 		
 				<li class="nav right" style="color:#fff;"><?=$session->username?></li>

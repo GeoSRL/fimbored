@@ -1,8 +1,6 @@
 <?php
 
 class database {
-	
-	public $lenOfErr;
 
 	/*
 		Executes the database request and creates an array, $database->db_select[ROW_#]["ROW_NAME"],
@@ -76,7 +74,7 @@ class database {
 		
 		global $form;
 		
-		$this->lenOfErr = strlen($error);
+		$database->lenOfErr = strlen($error);
 
 		echo "<div class=\"error\"> " . $error . "</div>";
 	

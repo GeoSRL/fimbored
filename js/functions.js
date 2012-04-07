@@ -1,18 +1,3 @@
-function doJob(jobID) {
-	div = 'job',
-	
-	$.post("inc/c.php?",{"jobID":jobID},function(html) {
-			$('div#'+div+jobID).css('display','none');
-		  $('#'+div+jobID).html('('+html+')').fadeIn();
-	});
-}
-
-function refresh(div2ref, link2load) {
- var auto_refresh = setInterval(function () {
-		$(div2ref).load(link2load).fadeIn("slow");
-		});
-}
-
 $(document).ready(function() { 
 
 	//When page loads...
@@ -38,8 +23,3 @@ $(document).ready(function() {
 	});
 
 });
-
-var RecaptchaOptions = {
-    theme : 'white',
-    custom_theme_widget: 'recaptcha_widget'
- };

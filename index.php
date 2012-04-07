@@ -17,21 +17,21 @@
 			$database->db_select("news", "id ORDER BY id DESC"); //call a db select and order it by the ID descending
 			$db = $database->db_select; //make the for loop more readable
 					
-		for($i = 0; $i < 5; $i++) {
+		foreach($db as $dbr) {
 
 	?>
 		
 			<div id="main_cont">
 				
 				<div class="post-header-txt left">
-					Posted by <b><? echo $db[$i]["author"]; ?></b> on <? echo $db[$i]["date"]; ?> 
+					Posted by <b><? echo $dbr["author"]; ?></b> on <? echo $dbr["date"]; ?> 
 				</div>
 				
-				<div class="post-header-txt right">#<? echo $db[$i]["id"]; ?></div>
+				<div class="post-header-txt right">#<? echo $dbr["id"]; ?></div>
 							
-				<p class="body-text">
-					<? echo $db[$i]["body"]; ?>
-				</p>
+				<div class="body-text">
+					<? echo $dbr["body"]; ?>
+				</div>
 				
 			</div>
 		

@@ -2,8 +2,6 @@
 
 class check {
 	
-	var $failID; //var for what fail message to echo
-	
 	/*
 		Checks to see if you the username already 
 		exists and whether it is long enough to be valid.
