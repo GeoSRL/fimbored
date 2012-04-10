@@ -9,6 +9,6 @@
 		<div class="msg_form search_txt">
 			Message:  
 			<textarea class="search_box contact" rows="5" cols="26" name="message"><? echo $form->message; ?></textarea></div>
-		<input type="submit" class="main_btn search_btn right" value="Send" name="msgform">
+		<input type="submit" class="main_btn search_btn left" value="Send" name="msgform">
 	</form>			
 </div>	

@@ -25,7 +25,7 @@ p {
 }
 
 input, textarea {
-		 background: #FFFFFF;
+     background: none repeat scroll 0% 0% #FFFFFF;
 }
 
 a {
@@ -162,8 +162,8 @@ li.nav {
 
 .login_box {
      background: url("http://fimbored.com/m/images/gradient.png") repeat scroll 0pt 0pt #C0CF7C;
+     border-radius: 3px 3px 3px 3px;
      border: 0pt none;
-     box-shadow: 0pt 0pt 1px #232323;
      font-size: 11px;
      margin: 4px 4px 0pt 0pt;
      padding: 3px;
@@ -219,14 +219,15 @@ li.nav {
 }
 
 .contact:focus, contact:hover {
-     border: 1px solid #C0CF7C;
+     box-shadow: 0pt 0pt 0pt #FFFFFF, 1px 1px 3px 0pt #D9D9D9 inset;
 }
 
 .search_txt {
      clear: both;
      cursor: text;
      float: left;
-     margin: 15px 0px 0px;
+     margin: 15px 0pt 0pt;
+     text-indent: 5px;
      width: 100%;
 }
 
@@ -237,7 +238,8 @@ li.nav {
 
 .main_btn {
      background: none repeat scroll 0% 0% #FFFFFF;
-     border: 1px solid #DDDDDD;
+     border-radius: 3px 3px 3px 3px;
+     border: 1px solid #E9E9E9;
 }
 
 .error {
@@ -260,10 +262,14 @@ li.nav {
 }
 
 .contact {
-     border: 1px solid #DDDDDD;
+     border-color: #F1F1F1;
+     border-radius: 3px 3px 3px 3px;
+     border-style: solid;
+     border-width: 0px 1px 1px 0px;
+     box-shadow: 0pt 0pt 0pt #FFFFFF, 1px 1px 3px 0pt #E9E9E9 inset;
      float: left;
      margin-bottom: 4px;
-     padding: 2px;
+     padding: 4px;
 }
 
 .right {
